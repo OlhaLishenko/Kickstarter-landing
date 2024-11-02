@@ -27,6 +27,12 @@
     padding: 0;
     background: transparent;
     cursor: pointer;
+    transform: scale(1);
+    @include hoverEffect;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   &__pages {

@@ -39,6 +39,7 @@ const buttonRight = document.querySelector(".slider__btn--right");
 const buttonLeft = document.querySelector(".slider__btn--left");
 const content = document.querySelectorAll(".features__content-box");
 const container = document.querySelector(".features__content");
+const currentPage = document.querySelector(".slider__pages--current");
 
 let currentIndex = 0;
 
@@ -49,6 +50,7 @@ buttonRight.addEventListener("click", () => {
     content[currentIndex].classList.add("active");
     buttonLeft.removeAttribute("disabled");
     buttonLeft.style.pointerEvents = "all";
+    currentPage.textContent = `0${currentIndex + 1}`;
 
     if (currentIndex === content.length - 1) {
       buttonRight.setAttribute("disabled", "true");
@@ -64,6 +66,7 @@ buttonLeft.addEventListener("click", () => {
     content[currentIndex].classList.add("active");
     buttonRight.removeAttribute("disabled");
     buttonRight.style.pointerEvents = "all";
+    currentPage.textContent = `0${currentIndex + 1}`;
 
     if (currentIndex === 0) {
       buttonLeft.setAttribute("disabled", "true");
