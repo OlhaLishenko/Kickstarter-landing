@@ -14,6 +14,7 @@
   &__article {
     @include gridPage;
     @include paddingInline;
+
     grid-auto-flow: column;
 
     &:last-of-type {
@@ -104,6 +105,7 @@
     margin: 0 0 30px;
     color: $main-text-color;
     text-transform: uppercase;
+
     @include fontStyles (30px, 700, 40px);
 
     @include onTablet {
@@ -134,8 +136,8 @@
 
   &__text {
     color: $second-text-color;
-    @include fontStyles (14px, 400, 21px);
     margin-bottom: 10px;
+    @include fontStyles (14px, 400, 21px);
 
     @include onTablet {
       @include fontStyles (16px, 400, 24px);
@@ -151,6 +153,7 @@
     color: $main-teal;
     text-decoration: none;
     text-transform: uppercase;
+    
     @include fontStyles (12px, 700, 14px);
 
     &::after {

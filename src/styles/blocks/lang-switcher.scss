@@ -35,7 +35,9 @@
 
   &--menu {
     color: $main-text-color;
+    
     @include fontStyles (14px, 400, 18px);
+
     @include onTablet {
       display: none;
     }

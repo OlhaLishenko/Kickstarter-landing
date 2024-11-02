@@ -8,8 +8,9 @@
   border: none;
   align-items: center;
   justify-content: center;
-  @include fontStyles (12px, 500, 14px);
   overflow: hidden;
+
+  @include fontStyles (12px, 500, 14px);
 
   &::after {
     content: "";
@@ -24,6 +25,7 @@
     visibility: hidden;
     transform: translateX(200%);
     pointer-events: none;
+    
     @include hoverEffect;
   }
 

@@ -16,7 +16,6 @@
       margin-top: $mainbox-gap-desktop;
       justify-content: center;
     }
-
   }
 
   &__list {
@@ -28,10 +27,12 @@
     &--menu {
       gap: 25px;
       flex-direction: column;
+
       @include fontStyles (14px, 400, 20px);
 
       @include onTablet {
         gap: 40px;
+
         @include fontStyles (22px, 400, 28px);
       }
     }
@@ -40,6 +41,7 @@
       @include onDesktop {
         flex-direction: row;
         gap: 84px;
+
         @include fontStyles (14px, 400, 20px);
       }
     }
@@ -47,7 +49,6 @@
 
   &__link {
     display: inline-block;
-    position: relative;
     text-decoration: none;
     text-transform: uppercase;
     font-family: $main-font;
@@ -74,11 +75,9 @@
     transition-timing-function: cubic-bezier(0.08,0.82,0.17,1);
   }
 
-  &:hover::after {
-    transform: translate(50%, 50%);
-    opacity: 1;
-  }
-
-    // @include hover (text-shadow, 1px 0 0 $hover-text-menu);
+    &:hover::after {
+      transform: translate(50%, 50%);
+      opacity: 1;
+    }
   }
 }

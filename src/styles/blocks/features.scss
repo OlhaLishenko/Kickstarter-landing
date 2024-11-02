@@ -9,9 +9,9 @@
 
   &__content {
     @include gridPage;
+
     background-color: $second-teal;
     justify-items: center;
-
 
     @include onTablet {
       margin-inline: $padding-inline-tablet;
@@ -22,15 +22,14 @@
     @include onDesktop {
       margin-inline: $padding-inline-desktop;
     }
-
   }
 
   &__content-box {
-    display: flex;
     @include paddingInline;
+
+    display: flex;
     grid-column: span 4;
     padding-top: 30px;
-
     flex-direction: column;
     gap: 20px;
 
@@ -69,7 +68,6 @@
         grid-row: 1;
         grid-column-start: 7;
       }
-
     }
   }
 
@@ -112,7 +110,6 @@
     margin: 0;
     padding: 0;
     list-style-position: inside;
-
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -122,14 +119,12 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-
     grid-column: 1/-1;
 
     @include onTablet {
       flex-direction: row;
       justify-content: space-between;
       gap: 80px;
-
       grid-column: 2/-1;
       grid-row: 2;
     }

@@ -1,5 +1,4 @@
 .header {
-  // display: none !important;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -50,6 +49,7 @@
 
     &--title {
       @include fontStyles (40px, 700, 52px);
+      
       padding: 0;
       text-transform: uppercase;
 

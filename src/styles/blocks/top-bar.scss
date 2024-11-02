@@ -38,10 +38,6 @@
     display: flex;
     flex-direction: row;
 
-    &:hover .top-bar__logo-image--small {
-      transform: rotate(360deg);
-    }
-
     @include onDesktop {
       height: 26px;
     }
@@ -54,6 +50,10 @@
         transition: transform .5s;
         transition-timing-function: ease-out;
       }
+    }
+
+    &:hover .top-bar__logo-image--small {
+      transform: rotate(360deg);
     }
   }
 }

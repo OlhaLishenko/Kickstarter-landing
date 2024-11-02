@@ -1,7 +1,7 @@
 .footer {
-  margin-bottom: 20px;
-
   @include paddingInline;
+
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -50,9 +50,44 @@
       transform: scale(1.1);
     }
 
+    &::before {
+      border-radius: 5px;
+      width: fit-content;
+      height: fit-content;
+      position: absolute;
+      font-family: inherit;
+      top: 0;
+      font-size: 12px;
+      background-color: $main-teal;
+      padding: 6px;
+      z-index: -1;
+      transform: scale(0);
+      color: #fff;
+
+      @include hoverEffect;
+      transition-duration: .7s;
+    }
+
     &:hover::before {
       transform: scale(1);
       top: -110%;
+    }
+
+    &::after {
+      content: "";
+      z-index: -1;
+      background-color: $main-bg;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      position: absolute;
+      bottom: 54%;
+      right: 50%;
+      transform: translate(50%, 50%);
+      border: 1px solid transparent;
+
+      @include hoverEffect;
+      transition-duration: .7s;
     }
 
     &:hover::after {
@@ -73,47 +108,13 @@
       content: "instagram";
       right: -90%;
     }
-
-    &::after {
-      content: "";
-      z-index: -1;
-      background-color: $main-bg;
-      border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      position: absolute;
-      bottom: 54%;
-      right: 50%;
-      transform: translate(50%, 50%);
-      border: 1px solid transparent;
-
-      @include hoverEffect;
-      transition-duration: .7s;
-    }
-
-    &::before {
-      border-radius: 5px;
-      width: fit-content;
-      height: fit-content;
-      position: absolute;
-      font-family: inherit;
-      top: 0;
-      font-size: 12px;
-      background-color: $main-teal;
-      padding: 6px;
-      z-index: -1;
-      transform: scale(0);
-      color: #fff;
-
-      @include hoverEffect;
-      transition-duration: .7s;
-    }
   }
 
   &__text {
     color: $footer-text-color;
     text-align: center;
     margin: 0;
+    
     @include fontStyles (14px, 400, 21px);
   }
 
@@ -132,7 +133,6 @@
       bottom: 20px;
 
       transition: transform 2s;
-      // transition-delay: 0.1s;
       transition-timing-function: cubic-bezier(0.08,0.82,0.17,1);
 
       &::after {
@@ -144,7 +144,6 @@
         background-color: $main-teal;
         border-radius: 50%;
         top: 2px;
-
         transition: transform 0.3s;
       }
 

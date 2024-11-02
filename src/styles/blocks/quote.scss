@@ -5,13 +5,8 @@
   width: 100%;
   justify-content: center;
   font-family: $main-font;
-  gap: 30px;
 
   overflow: hidden;
-
-  // &:hover .quote__photo-wrap {
-  //   transform: scale(1.1);
-  // }
 
   @include onTablet {
     gap: 40px;
@@ -48,6 +43,7 @@
       opacity: 0;
 
       transform: translateX(-100vh);
+
       @include hoverEffect;
 
       &--move {
@@ -67,6 +63,7 @@
 
     &--name {
       @include fontStyles (16px, 700, 22px);
+      
       margin-bottom: 5px;
     }
 
